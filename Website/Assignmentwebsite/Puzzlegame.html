@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Puzzle Game</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Puzzle Game</h1>
+    </div>
+
+    <div class="container">
+    <br>
+    </div>
+        <h2>Quick Test:</h2>
+        <h3>How Many Squares Are in This Picture?</h3>
+        <img class="img1" src="https://iknow-pic.cdn.bcebos.com/09fa513d269759ee6729987abefb43166d22df02?x-bce-process=image/resize,m_lfit,w_600,h_800,limit_1">
+        <br>
+        <div id='sidebar'>
+            <form id='guess'>
+                <div class='form-group'>
+                    <br>
+                    <label>
+                        Enter Your Answer:
+                    </label>
+                    <br>
+                    <input type='text' name='guess'>
+                </div>
+                <button id='submitBtn' type='submit'>Send</button>
+            </form>
+    <script>
+        function sayHello() {
+         var guess = document.forms[0].guess.value;
+           if (guess == '')
+             {alert("Try it!");
+             }
+           else if (guess == "40")
+             {alert("So smart! You are almost the cleverest one!");}
+           else
+             {alert("Sorry! You are wrong. Try again!");}
+             }
+            document.getElementById('submitBtn').addEventListener('click', sayHello);
+    </script>
+    
+    
+</body>
+</html>
