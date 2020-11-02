@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 5</title>
+    </head>
+    <body>
+  
+        <!-- Headings -->
+   <style>
+        h1{text-align:center}
+   </style>
+  
+    <h1>
+        College view
+    </h1>
+    <h2>
+        You can check the College information based on different attributes.
+    </h2>
+
+<hr>
+ <!--selector-->
+
+    <form>
+        <select id="selecter" class="form-control" onchange="table();">
+            <option value selected disabled>Categories</option>
+            <option value="0">Overall</option>
+            <option value="1">Region</option>
+            <option value="2">Ranking</option>
+        </select>
+    </form>
+    <br>
+
+<!--airtable--> <div id="table">
+    <iframe id= "iframe" class="airtable-embed" src="https://airtable.com/embed/shrxBIzUpkVT9YnnP?backgroundColor=cyanLight&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;">
+    </iframe>
+    </div>
+
+    <script>
+        function table(){
+    var selecter = parent.document.getElementById("selecter");
+                                if (selecter.value=="0"){document.getElementById("iframe").src="https://airtable.com/embed/shrxBIzUpkVT9YnnP?backgroundColor=cyanLight&viewControls=on"};
+                                if (selecter.value=="1"){document.getElementById("iframe").src="https://airtable.com/embed/shrCi0nYDcrdLy2Ve?backgroundColor=cyanLight&viewControls=on"};
+                                if (selecter.value=="2"){document.getElementById("iframe").src="https://airtable.com/embed/shr4HZ5gyX2JYgWCg?backgroundColor=cyanLight&viewControls=on"};
+                                }
+    </script>
+        
+   </div>
+  
+<br>
+<br>
+</body>
+</html>
